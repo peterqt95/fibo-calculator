@@ -1,0 +1,115 @@
+# do fibonacci_calculator_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying D:/Altera_Lite/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:/Altera_Lite/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Peter/Desktop/ECE111/Fibo/ece111project1 {C:/Users/Peter/Desktop/ECE111/Fibo/ece111project1/fibonacci_calculator.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 23:20:16 on Jan 16,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Peter/Desktop/ECE111/Fibo/ece111project1" C:/Users/Peter/Desktop/ECE111/Fibo/ece111project1/fibonacci_calculator.v 
+# -- Compiling module fibonacci_calculator
+# 
+# Top level modules:
+# 	fibonacci_calculator
+# End time: 23:20:16 on Jan 16,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.fibonacci_calculator
+# vsim work.fibonacci_calculator 
+# Start time: 23:20:34 on Jan 16,2016
+# Loading work.fibonacci_calculator
+vlog -reportprogress 300 -work work C:/Users/Peter/Desktop/ECE111/Fibo/ece111project1/fibonacci_calculator.v
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 23:21:20 on Jan 16,2016
+# vlog -reportprogress 300 -work work C:/Users/Peter/Desktop/ECE111/Fibo/ece111project1/fibonacci_calculator.v 
+# -- Compiling module fibonacci_calculator
+# 
+# Top level modules:
+# 	fibonacci_calculator
+# End time: 23:21:20 on Jan 16,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/Peter/Desktop/ECE111/Fibo/ece111project1/tb_fibonacci_calculator.v
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 23:21:20 on Jan 16,2016
+# vlog -reportprogress 300 -work work C:/Users/Peter/Desktop/ECE111/Fibo/ece111project1/tb_fibonacci_calculator.v 
+# -- Compiling module tb_fibonacci_calculator
+# 
+# Top level modules:
+# 	tb_fibonacci_calculator
+# End time: 23:21:20 on Jan 16,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_fibonacci_calculator
+# End time: 23:21:40 on Jan 16,2016, Elapsed time: 0:01:06
+# Errors: 0, Warnings: 0
+# vsim work.tb_fibonacci_calculator 
+# Start time: 23:21:40 on Jan 16,2016
+# Loading work.tb_fibonacci_calculator
+# Loading work.fibonacci_calculator
+add wave sim:/tb_fibonacci_calculator/*
+run
+run -all
+# 
+# ---------------------
+# 
+# Project 1 w/ Input: 5
+# 
+# CORRECT RESULT:     5, GOOD JOB!
+# 
+# ---------------------
+# 
+# 
+# ---------------------
+# 
+# Project 1 w/ Input: 9
+# 
+# CORRECT RESULT:    34, GOOD JOB!
+# 
+# ---------------------
+# 
+# 
+# ---------------------
+# 
+# Project 1 w/ Input: 12
+# 
+# CORRECT RESULT:   144, GOOD JOB!
+# 
+# ---------------------
+# 
+# 
+# ---------------------
+# 
+# Project 1 w/ Input: 0
+# 
+# CORRECT RESULT:     0, GOOD JOB!
+# 
+# ---------------------
+# 
+# 
+# ---------------------
+# 
+# Project 1 w/ Input: 1
+# 
+# CORRECT RESULT:     1, GOOD JOB!
+# 
+# ---------------------
+# 
+# 
+# ---------------------
+# 
+# Project 1 w/ Input: 18
+# 
+# CORRECT RESULT:  2584, GOOD JOB!
+# 
+# ---------------------
+# 
+# ** Note: $stop    : C:/Users/Peter/Desktop/ECE111/Fibo/ece111project1/tb_fibonacci_calculator.v(235)
+#    Time: 2090 ps  Iteration: 1  Instance: /tb_fibonacci_calculator
+# Break in Module tb_fibonacci_calculator at C:/Users/Peter/Desktop/ECE111/Fibo/ece111project1/tb_fibonacci_calculator.v line 235
